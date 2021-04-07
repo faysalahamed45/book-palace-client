@@ -1,9 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router';
-import { Link } from 'react-router-dom';
 import { userCreate } from '../../App';
 import Header from '../Header/Header';
-import './CheckOut.css'
+import './CheckOut.css';
 
 
 const CheckOut = () => {
@@ -15,7 +14,7 @@ const CheckOut = () => {
     const [order, setOrder] = useState([]);
 
     useEffect(() => {
-        const uri = `http://localhost:5050/books/${id}`
+        const uri = `https://afternoon-savannah-22003.herokuapp.com/books/${id}`
         console.log(uri);
         fetch(uri)
             .then(res => res.json())

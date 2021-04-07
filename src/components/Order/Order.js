@@ -12,7 +12,7 @@
 //     const [order, setOrder] = useState([]);
 
 //     useEffect(() => {
-//         const uri = `http://localhost:5050/books/${id}`
+//         const uri = `https://afternoon-savannah-22003.herokuapp.com/books/${id}`
 //         fetch(uri)
 //             .then(res => res.json())
 //             .then(data => setOrder(data))

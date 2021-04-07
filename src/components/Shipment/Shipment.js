@@ -3,8 +3,6 @@ import { useForm } from 'react-hook-form';
 import { userCreate } from '../../App';
 import Header from '../Header/Header';
 
-
-
 const Shipment = () => {
 
   const { register, handleSubmit, watch, errors } = useForm();
@@ -15,7 +13,7 @@ const Shipment = () => {
     console.log(addCart);
     const orderDetails = { ...loggedInUser, order:addCart, shipment: data, orderTime: new Date() }
     console.log(orderDetails);
-    fetch('http://localhost:5050/addOrder', {
+    fetch('https://afternoon-savannah-22003.herokuapp.com/addOrder', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

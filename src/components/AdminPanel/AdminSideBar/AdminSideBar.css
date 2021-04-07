@@ -3,7 +3,7 @@
 }
 .sidebar-header{
     padding:8px;
-    color:cyan;
+    color:rgb(243, 241, 250);
 }
 button:focus {
     box-shadow: none !important;
@@ -18,7 +18,7 @@ button:focus {
     text-decoration: none;
     overflow: hidden;
     cursor: pointer;
-    background-color: rgb(11, 171, 245);
+    background-color: rgb(37, 174, 238);
 outline : none;
 border:0;
 width:95%;
@@ -29,7 +29,7 @@ margin-top:30px;
   }
   .sidebar-btn:after {
     content: "";
-    background: #0bdb7a;
+    background: #0721b8;
     display: block;
     position: absolute;
     padding-top: 300%;

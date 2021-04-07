@@ -1,10 +1,10 @@
 .form-container{
     width:892px;
     height:800px;
-    background-color: rgb(196, 18, 18);
+    background-color: rgba(7, 52, 201, 0.685);
 }
 .form{
-    background-color: rgb(202, 198, 198);
+    background-color: rgb(218, 211, 211);
     width:880px;
     height:700px;
     text-align: left;
@@ -19,7 +19,7 @@
     display:grid;
     grid-template-columns: repeat(2,1fr);
     gap:15px;
-    background-color: rgb(134, 131, 131);
+    background-color: rgb(150, 138, 138);
     border-radius: 5px;
     margin-left:8%;
  
@@ -38,7 +38,7 @@
     padding:0;
     margin-left:85%;
 background:transparent;
-border:2px solid rgb(13, 98, 245);
+border:2px solid rgb(51, 175, 233);
 }
 .input-submit:hover{
     background-color: rgb(13, 98, 245);
@@ -57,7 +57,7 @@ input[type="file"]{
     display: none;
 }
 label{
-    color:rgb(148, 19, 19);
+    color:rgb(9, 99, 202);
     height: 35px;
     width: 200px;
     background-color: #f5af09;
@@ -70,20 +70,20 @@ border: 1px solid black;
 }
 @media screen and (max-width: 500px) {
     .form{
-        width:340px;
+        width:318px;
         height:450px;
     }
     .input-container{
-        width:300px;
+        width:280px;
         height:300px;
     }
     .form-container{
-        width:350px;
+        width:330px;
         height:500px;
-        margin-left: 8%;
+        margin-left: 5%;
     }
     label{
-        width: 130px;
+        width: 100px;
     }
     label .fas{
         display:block;

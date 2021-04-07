@@ -2,12 +2,13 @@ import React, { useContext, useEffect, useState } from 'react';
 import { userCreate } from '../../../App';
 import Header from '../../Header/Header';
 import UserOrderItemDetail from '../UserOrderItemDetail/UserOrderItemDetail';
+import './UserOrderItem.css'
 
 const UserOrderItem = () => {
     const [bookCart, setBookCart] = useState([]);
     const [loggedInUser, setLoggedInUser] = useContext(userCreate);
     useEffect(() => {
-        fetch('http://localhost:5050/oderBook?email=' + loggedInUser.email)
+        fetch('https://afternoon-savannah-22003.herokuapp.com/oderBook?email=' + loggedInUser.email)
             .then(res => res.json())
             .then(data => {
                 setBookCart(data);
@@ -18,9 +19,11 @@ const UserOrderItem = () => {
     return (
         <div>
             <Header userName={loggedInUser.name} success={loggedInUser.success}></Header>
-           {
-               bookCart.map(bookItem=><UserOrderItemDetail bookItem={bookItem.order}></UserOrderItemDetail>)
+        <div className="order-item">
+        {
+               bookCart.map((bookItem,index)=><UserOrderItemDetail bookItem={bookItem.order} key={index}></UserOrderItemDetail>)
            }
+        </div>
         </div>
     );
 };

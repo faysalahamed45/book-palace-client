@@ -5,7 +5,7 @@ import './Header.css';
 
 const Header = (props) => {
     const [loggedInUser, setLoggedInUser] = useContext(userCreate);
-    console.log(props.userName);
+    // console.log(props.userName);
     return (
         <div>
             <nav className="navbar  navbar-expand-lg navbar-light container pl-0 pe-0 ">
@@ -20,10 +20,7 @@ const Header = (props) => {
                             <Link to="/order">Orders</Link>
                             <Link to="/admin">Admin</Link>
                             <Link to="/checkout">Checkout</Link>
-                            {/* {props.newUser?  <Link className="active" to="/login">Login</Link>:<p>{props.user}</p>} */}
-
-                            {props.success ? <h4 style={{ display: "inline-block" }}>{props.userName}</h4> : <Link className="active" to="/login">Login</Link>}
-
+                            {props.success ? <h4 style={{ display: "inline-block pe-3" }}>{props.userName}</h4> : <Link className="active" to="/login">Login</Link>}
                             {
                                 props.success &&
                                 <button onClick={() => setLoggedInUser({})}><i className="fas fa-sign-out-alt "></i></button>
@@ -32,11 +29,6 @@ const Header = (props) => {
                     </div>
                 </div>
             </nav>
-
-
-
-
-
         </div>
     );
 };

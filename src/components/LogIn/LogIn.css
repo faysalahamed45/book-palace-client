@@ -133,10 +133,13 @@ form{
         background-size: cover;
     }
     .button{
-        display: block;
+        display: flex;
+        flex-direction: column-reverse;
     }
     .create-account-container{
         height:555 px;
+        width: 90%;
     }
+
   }
  

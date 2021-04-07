@@ -210,19 +210,13 @@ const LogIn = () => {
     return (
         <div>
             <Header userName={loggedInUser.name} success={loggedInUser.success}></Header>
-            {/* <p>name:{user.name}</p>
-                <h6>error:{user.errorDisMatch}</h6>
-                <h1>name: {user.password}</h1>
-                <h2>email: {user.email}</h2>
-                <p>fa:{user.success}</p> */}
+
             <div className="login-container">
-            <div className="container-margin">
+                <div className="container-margin">
                     <div className="create-account-container">
                         <h2>{newUser ? "Create an account" : "Login"}</h2>
                         <form onSubmit={handleSubmit}>
                             {newUser && <input type="text" name="name" placeholder="Name" onBlur={inputFieldChange} required />}<br />
-                            <h6></h6>
-
                             <input type="text" name="email" placeholder="Username or Email" onChange={inputFieldChange} required /><br />
                             <h6>{user.emailError}</h6>
 

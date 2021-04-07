@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import  Delete from '../../../icons/Group 33150.png';
+import Delete from '../../../icons/Group 33150.png';
 import './DeleteEvent.css';
 
 const DeleteEvent = () => {
     // const [dummyState,rerender] = React.useState(1);
     const [bookInfo, setBookInfo] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5050/books')
+        fetch('https://afternoon-savannah-22003.herokuapp.com/books')
             .then(res => res.json())
             .then(data => {
                 setBookInfo(data);
@@ -15,7 +15,7 @@ const DeleteEvent = () => {
 
     }, [bookInfo])
     const handleDelete = (id) => {
-        const uri = `http://localhost:5050/delete/${id}`
+        const uri = `https://afternoon-savannah-22003.herokuapp.com/delete/${id}`
         fetch(uri, {
             method: 'Delete'
         })

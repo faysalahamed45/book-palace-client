@@ -1,12 +1,18 @@
 .home-container{
+  margin-top: 30px;
 }
 .card{
 height:444px;
-background-color: rgba(106, 234, 238, 0.774)!important;
+background-color: rgba(7, 68, 70, 0.774)!important;
 box-shadow: 2px 5px 5px gray;
 }
+.card-container{
+  height:440px;
+  width:250px;
+}
 .card-container img{
-    height:300px;
+    height:270px;
+    width:250px;
 }
 button:focus {
     box-shadow: none !important;

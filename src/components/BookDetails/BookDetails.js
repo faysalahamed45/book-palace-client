@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { userCreate } from '../../App';
-import Header from '../Header/Header';
 import './BookDetails.css';
 
 const BookDetails = (props) => {

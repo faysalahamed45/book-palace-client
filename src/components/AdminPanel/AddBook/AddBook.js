@@ -9,8 +9,8 @@ const AddBook = () => {
     const { register, handleSubmit, watch, errors } = useForm();
     const [loggedInUser, setLoggedInUser] = useContext(userCreate);
     const onSubmit = data => {
-        console.log(data.name);
-        console.log(imageURL);
+        // console.log(data.name);
+        // console.log(imageURL);
         const eventData = {
             name: data.name,
             author: data.author,
@@ -18,10 +18,10 @@ const AddBook = () => {
             imageUrl: imageURL
         }
         const newData = { ...loggedInUser, ...eventData }
-        console.log(eventData);
+        // console.log(eventData);
         alert('subit sucess')
 
-        const uri = `http://localhost:5050/addEvent`;
+        const uri = `https://afternoon-savannah-22003.herokuapp.com/addEvent`;
         fetch(uri, {
             method: 'POST',
             headers: {
@@ -33,7 +33,7 @@ const AddBook = () => {
             .then(res => console.log("object"))
     }
     const handleImageUpload = event => {
-        console.log(event.target.files);
+        // console.log(event.target.files);
         const imageData = new FormData();
         imageData.set('key', '5da74151113aff51f90ff24f96689da2');
         imageData.append('image', event.target.files[0]);
@@ -43,7 +43,7 @@ const AddBook = () => {
                 setImageURL(response.data.data.display_url);
             })
             .catch(function (error) {
-                console.log(error);
+                // console.log(error);
             });
     }
     return (
